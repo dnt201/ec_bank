@@ -1,5 +1,5 @@
-// import axios from '../axios'
-import axios from 'axios'
+import axios from '../axios'
+// import axios from 'axios'
 import axios1 from 'axios'
 
 import {
@@ -24,6 +24,18 @@ import {
   CARD_CREATE_REQUEST,
   CARD_CREATE_SUCCESS,
   CARD_CREATE_FAIL,
+
+  GET_ALL_CARD_LEFT_REQUEST,
+  GET_ALL_CARD_LEFT_SUCCESS,
+  GET_ALL_CARD_LEFT_FAIL,
+
+  GET_CARD_LEFT_REQUEST,
+  GET_CARD_LEFT_SUCCESS,
+  GET_CARD_LEFT_FAIL,
+
+  GENERATE_CARD_REQUEST,
+  GENERATE_CARD_SUCCESS,
+  GENERATE_CARD_FAIL,
 
 
 } from '../constants/cardConstants'
@@ -334,3 +346,90 @@ export const createCardGlobalCredit = (name,ranking,cardStatementDate,paymentDat
     })
   }
 }
+
+
+export const getAllCardLeft = () => async (dispatch) => {
+  try {
+    dispatch({
+      type: GET_ALL_CARD_LEFT_REQUEST,
+    })
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }
+    console.log(`/api/v1/admin/card`)
+    const { data } = await axios.get(`/api/v1/admin/cards`, config)
+
+    dispatch({
+      type: GET_ALL_CARD_LEFT_SUCCESS,
+      payload: data,
+    })
+  } catch (error) {
+    dispatch({
+      type: GET_ALL_CARD_LEFT_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    })
+  }
+}
+export const getCardLeft = (type) => async (dispatch) => {
+  try {
+    dispatch({
+      type: GET_CARD_LEFT_REQUEST,
+    })
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }
+
+    console.log(`/api/v1/admin/card`, {type})
+    const { data } = await axios.get(`/api/v1/admin/card?type=${type}`, config)
+
+    dispatch({
+      type: GET_CARD_LEFT_SUCCESS,
+      payload: data,
+    })
+  } catch (error) {
+    dispatch({
+      type: GET_CARD_LEFT_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    })
+  }
+}
+
+export const generateCard = (type,name,amount) => async (dispatch) => {
+  try {
+    dispatch({
+      type: GENERATE_CARD_REQUEST,
+    })
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }
+
+    console.log(`/api/v1/admin/card/generate`, {type,name,amount})
+    const { data } = await axios.post(`/api/v1/admin/card/generate`,{type,name,amount}, config)
+
+    dispatch({
+      type: GENERATE_CARD_SUCCESS,
+      payload: data,
+    })
+  } catch (error) {
+    dispatch({
+      type: GENERATE_CARD_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    })
+  }
+}
+

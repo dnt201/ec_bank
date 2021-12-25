@@ -27,6 +27,9 @@ import {
     checkPinReducer,
     getRatesReducer,
     createCardReducer,
+    getAllCardLeftReducer,
+    getCardLeftReducer,
+    generateCardReducer
 }
 from './cardReducer'
 
@@ -61,6 +64,9 @@ const rootReducer = combineReducers({
     createCard:createCardReducer,
     withdraw:withdrawReducer,
     viewAllLog:viewAllLogReducer,
+    getAllCardLeft:getAllCardLeftReducer,
+    getCardLeft:getCardLeftReducer,
+    generateCard:generateCardReducer,
 
 })
 export default rootReducer;

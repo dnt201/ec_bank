@@ -7,11 +7,11 @@ import {
   CARD_DETAIL_SUCCESS,
   CARD_DETAIL_FAIL,
 
-  
+
   GET_RATES_REQUEST,
   GET_RATES_SUCCESS,
   GET_RATES_FAIL,
-   
+
   CARD_CHECK_PIN_REQUEST,
   CARD_CHECK_PIN_SUCCESS,
   CARD_CHECK_PIN_FAIL,
@@ -20,7 +20,20 @@ import {
   CARD_CREATE_REQUEST,
   CARD_CREATE_SUCCESS,
   CARD_CREATE_FAIL,
- 
+
+  GET_ALL_CARD_LEFT_REQUEST,
+  GET_ALL_CARD_LEFT_SUCCESS,
+  GET_ALL_CARD_LEFT_FAIL,
+
+  GET_CARD_LEFT_REQUEST,
+  GET_CARD_LEFT_SUCCESS,
+  GET_CARD_LEFT_FAIL,
+
+
+  GENERATE_CARD_REQUEST,
+  GENERATE_CARD_SUCCESS,
+  GENERATE_CARD_FAIL,
+  GENERATE_CARD_RESET
 
 } from '../constants/cardConstants'
 
@@ -85,6 +98,47 @@ export const createCardReducer = (state = {}, action) => {
       return { loading: false, success: true }
     case CARD_CREATE_FAIL:
       return { loading: false, error: action.payload }
+    default:
+      return state
+  }
+}
+
+export const getAllCardLeftReducer = (state = {}, action) => {
+  switch (action.type) {
+    case GET_ALL_CARD_LEFT_REQUEST:
+      return { loading: true }
+    case GET_ALL_CARD_LEFT_SUCCESS:
+      return { loading: false, success: true, data: action.payload }
+    case GET_ALL_CARD_LEFT_FAIL:
+      return { loading: false, error: action.payload }
+    default:
+      return state
+  }
+}
+
+export const getCardLeftReducer = (state = {}, action) => {
+  switch (action.type) {
+    case GET_CARD_LEFT_REQUEST:
+      return { loading: true }
+    case GET_CARD_LEFT_SUCCESS:
+      return { loading: false, success: true, data: action.payload }
+    case GET_CARD_LEFT_FAIL:
+      return { loading: false, error: action.payload }
+    default:
+      return state
+  }
+}
+
+export const generateCardReducer = (state = {}, action) => {
+  switch (action.type) {
+    case GENERATE_CARD_REQUEST:
+      return { loading: true }
+    case GENERATE_CARD_SUCCESS:
+      return { loading: false, success: true }
+    case GENERATE_CARD_FAIL:
+      return { loading: false, error: action.payload }
+    case GENERATE_CARD_RESET:
+      return {}
     default:
       return state
   }

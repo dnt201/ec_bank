@@ -1,5 +1,5 @@
-// import axios from '../axios'
-import axios from 'axios'
+import axios from '../axios'
+// import axios from 'axios'
 import axios1 from 'axios'
 import {
   USER_DETAILS_REQUEST,

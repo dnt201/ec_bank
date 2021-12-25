@@ -1,4 +1,7 @@
 
+.m-b-32px {
+    margin-bottom: 32px;
+}
 .list-category-container{
     margin: 16px 8px;
 }
@@ -51,4 +54,32 @@
     cursor: pointer;
     transition: .5s;
     border: 1px solid white;
+}
+
+
+.list-card-container .item_header {
+    display: flex;
+    flex-direction: row;
+}
+.list-card-container .item_header>button {
+    font-size: 16px;
+    cursor: pointer;
+    padding:0 8px;
+    margin-right: 4px;
+}
+.list-card-container .item_header>input {
+    font-size: 16px;
+    cursor: pointer;
+    padding:0 8px;
+    margin-right: 4px;
+    width: 80px;
+}
+.list-card-container>div {
+    padding:16px 24px;
+}
+.list-card-container>div:nth-child(even) {
+    background-color: #a7a7a7;
+}
+
+.list-card-container>div span{
 }

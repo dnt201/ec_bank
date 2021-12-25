@@ -15,6 +15,7 @@ const AdminAddCard = (props) => {
 
     const createCard = useSelector(state => state.createCard)
     const { loading, error, success } = createCard;
+    
 
     const [name, setName] = useState("");
     const [ranking, setRanking] = useState("Standard");
