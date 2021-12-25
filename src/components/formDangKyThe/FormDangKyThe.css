@@ -1,0 +1,94 @@
+.flex {
+  display: flex;
+}
+.form-dang-ky-the-container div.flex {
+  margin-bottom: 4px;
+}
+.form-dang-ky-the-container {
+    padding: 56px 24px 72px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    max-height: 70vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-dang-ky-the-container .btn-close-lazy {
+    color: red;
+    font-size: 16px;
+    position: fixed;
+    top: 8px;
+    right: 8px;
+    border: none;
+    background-color: transparent;
+    transition: 1s;
+    padding: 4px 8px;
+    z-index: 9;
+  }
+  .form-dang-ky-the-container .btn-close-lazy:hover {
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    transition: 1s;
+  }
+  .form-dang-ky-the-container .card-wrap {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .form-dang-ky-the-container .card-wrap .infor-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form-dang-ky-the-container .card-wrap .infor-wrap>button {
+    margin-top: 16px;
+    font-size: 16px;
+    padding: 4px 8px;
+    color: rgb(0, 65, 0);
+    background-color: transparent;
+    border: 1px solid rgb(0, 65, 0);
+    transition: 1s;
+  }
+  .form-dang-ky-the-container .card-wrap .infor-wrap>button:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(0, 65, 0);
+    transition: 1s;
+  }
+  .form-dang-ky-the-container .b-lazy {
+    width: 160px;
+  }
+
+
+@media screen and (max-width: 1200px) {
+  .form-dang-ky-the-container {
+    padding: 16px 24px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    min-height: 30vh;
+    max-height: 70vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 900px) {
+  .form-dang-ky-the-container .card-wrap {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 520px) {
+  .form-dang-ky-the-container {
+    width: 96%;
+  }
+}

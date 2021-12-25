@@ -1,0 +1,14 @@
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+
+.lazy_app {
+  width: 100%;
+  min-height: 50vh;
+  margin-top: 50vh;
+  display: flex;
+  justify-content: center;
+}

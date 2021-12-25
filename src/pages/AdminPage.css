@@ -1,0 +1,57 @@
+.w-20p {
+   width:20%!important;
+}
+.adminPage {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
+.nav-left-admin {
+    display:flex;
+    flex-direction: column;
+    width: 15%;
+    background-color:rgb(51,51,51);
+
+}
+
+.nav-left-admin .title {
+    text-align: center;
+    font-size:28px;
+    padding: 32px 0;
+    color: white;
+    font-weight: bold;
+    border-bottom: 3px solid #757575;
+}
+.nav-left-admin .title-lazy {
+    width: 100%;
+    text-align: center;
+    padding:8px 0 4px;
+    color: #757575;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.nav-left-admin .btn {
+    background-color: transparent;
+    padding: 24px 4px;
+    font-size: 20px;
+    color:white;
+    text-align: left;
+    transition: 1s;
+    border:none;
+    cursor: pointer;
+}
+.nav-left-admin .btn.border {
+    border-bottom: 2px solid #757575;
+}
+.nav-left-admin .btn:hover {
+    background-color:#f8f9fc;
+    color:rgb(51,51,51);
+    transition: 1s;
+}
+
+.container-right-admin {
+    width: 85%;
+    background-color:#f8f9fc;
+}

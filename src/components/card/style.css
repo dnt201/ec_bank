@@ -1,0 +1,188 @@
+.card {
+  width: 320px;
+  height: 190px;
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  perspective: 600px;
+}
+
+.card__part {
+  box-shadow: 1px 1px #aaa3a3;
+  top: 0;
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  display: inline-block;
+  width: 320px;
+  height: 190px;
+  /* background-image: url(https://videohive.img.customer.envatousercontent.com/files/94a6bceb-0a39-4788-8366-0c84a569bf75/inline_image_preview.jpg?auto=compress%2Cformat&fit=crop&crop=top&max-h=8000&max-w=590&s=5a55829af292f8b2daf771e25fb6b2be); */
+
+  /* background-image: url(https://ak.picdn.net/shutterstock/videos/1053112730/thumb/4.jpg?ip=x480); */
+  /* background-image: url(https://cutewallpaper.org/21/background-digital/Blue-abstract-background-digital-technology-vector-.jpg); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+}
+
+.card__front {
+  padding: 8px 8px 12px;
+  -webkit-transform: rotateY(0);
+  -moz-transform: rotateY(0);
+}
+
+.card__back {
+  padding: 12px 0;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+}
+
+.card__front-name {
+  color: gainsboro;
+  font-size: 21px;
+}
+.card__front-logo {
+  position: fixed;
+  width: 72px;
+  top: -4px;
+  right: 8px;
+}
+.card__front-chip {
+  width: 60px;
+}
+.card_front-number {
+  color: transparent;
+  text-shadow: -1px -1px 1px rgb(255 255 255), 0px 0px 0px rgb(0 0 0 / 60%),
+    1px -1px 1px rgb(255 255 255), -1px -1px 1px rgb(151 225 222),
+    -1px 1px 1px rgb(0 0 0 / 0%);
+  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.4);
+  font-size: 26px;
+  word-spacing: 2px;
+  text-align: center;
+  margin: 0;
+}
+.card__front-wrap {
+  display: flex;
+  align-items: center;
+}
+.card__front-title {
+  color: gainsboro;
+  margin-right: 6px;
+  font-size: 14px;
+}
+.card__front-exp {
+  color: transparent;
+  text-shadow: -1px -1px 1px rgb(255 255 255), 0px 0px 0px rgb(0 0 0 / 60%),
+    1px -1px 1px rgb(255 255 255), -1px -1px 1px rgb(151 225 222),
+    -1px 1px 1px rgb(0 0 0 / 0%);
+  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.4);
+  font-size: 18px;
+}
+.card__front-name-hold {
+  color: transparent;
+  text-shadow: -1px -1px 1px rgb(255 255 255), 0px 0px 0px rgb(0 0 0 / 60%),
+    1px -1px 1px rgb(255 255 255), -1px -1px 1px rgb(151 225 222),
+    -1px 1px 1px rgb(0 0 0 / 0%);
+  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.4);
+  font-size: 22px;
+}
+
+.card__front-type-card {
+  position: fixed;
+  width: 72px;
+  bottom: 0px;
+  right: 8px;
+}
+
+.card__black-line {
+  margin-top: 5px;
+  height: 38px;
+  background-color: #303030;
+}
+
+.card__back-content {
+  padding: 15px 15px 0;
+}
+
+.card__back-rules {
+  margin-top: 4px;
+  font-size: 11px;
+  color: gainsboro;
+}
+.card__back-hotline {
+  margin-top: 2px;
+  font-size: 14px;
+  color: gainsboro;
+}
+.card__secret-last {
+  color: #303030;
+  text-align: right;
+  margin: 0;
+  font-size: 14px;
+}
+.card__secret {
+  padding: 5px 12px;
+  background-color: #fff;
+  position: relative;
+}
+
+.card__secret:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  height: calc(100% + 6px);
+  width: calc(100% - 42px);
+  border-radius: 4px;
+  background: repeating-linear-gradient(
+    45deg,
+    #ededed,
+    #ededed 5px,
+    #f9f9f9 5px,
+    #f9f9f9 10px
+  );
+}
+
+.card:hover .card__front {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+}
+
+.card:hover .card__back {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+}
+
+@media screen and (max-width: 620px) {
+  .card,
+  .card__part {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .card,
+  .card__part {
+    width: 260px;
+  }
+  .card_front-number {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .card,
+  .card__part {
+    width: 240px;
+  }
+}

@@ -1,0 +1,76 @@
+.flex-non {
+    flex: none !important;;
+}
+.w-99p {
+    width: 99%;
+}
+.admin-add-card-container input {
+    padding: 5px 8px;
+    font-size: 16px;
+}
+
+.admin-add-card-container {
+    padding: 16px 32px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    min-height: 90vh;
+    max-height: 99vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+.admin-add-card-container .two-columns {
+    display: flex;
+    flex-direction: row;
+}
+
+.admin-add-card-container .image-previews {
+    width: 220px;
+    margin-left: 16px;
+}
+
+.admin-add-card-container .lazy-btn-add-card {
+    position: fixed;
+    color: red;
+    padding: 4px 8px;
+    top: 16px;
+    right: 16px;
+    border: none;
+    transition: 1s;
+}
+.admin-add-card-container .lazy-btn-add-card:hover {
+    background-color: red;
+    border: none;
+    color: white;
+    transition: 1s;
+    z-index: 9999999;
+}
+.admin-add-card-container .btn-add {
+    position: fixed;
+    color: rgb(22, 92, 22)!important;
+    background-color: transparent;
+    border: 1px solid rgb(22, 92, 22);
+    top:16px;
+    right: 48px;
+    transition: 1s;
+}
+.admin-add-card-container .btn-add:hover {
+    color: white!important;
+    background-color:rgb(22,92,22) ;
+    transition: 1s;
+}
+
+.admin-add-card-container .add-card-wrap .one_line.zzzz {
+    justify-content: unset!important;
+}
+.admin-add-card-container .add-card-wrap .one_line.zzzz select{
+    margin-left: 4px;
+    padding: 4px 8px;
+    font-size: 16px;
+}

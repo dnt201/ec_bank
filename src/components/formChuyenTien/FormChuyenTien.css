@@ -1,0 +1,89 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.m-b-16px {
+  margin-bottom: 16px;
+}
+
+.form-chuyen-tien-container {
+    padding: 16px 32px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    min-height: 40vh;
+    max-height: 70vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+.form-chuyen-tien-container .input {
+  font-size: 16px;
+  padding: 8px 4px;
+  margin: 2px 0 ;
+}
+
+.form-chuyen-tien-container .btn {
+  background-color: transparent;
+  width: 100%;
+  font-size: 16px;
+  padding: 4px 8px;
+  margin-bottom: 4px;
+  transition: 1s;
+  border: none;
+}
+
+.form-chuyen-tien-container .error-message {
+  color: #e02020;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+}
+
+.form-chuyen-tien-container .btn.check {
+  color: #66b0ff;
+  border: 1px solid #66b0ff;
+}
+.form-chuyen-tien-container .btn.check:hover {
+  color: white;
+  background-color:#66b0ff;
+}
+
+.form-chuyen-tien-container .btn.back {
+  color: #ffc233;
+  border:1px solid #ffc233;
+}
+.form-chuyen-tien-container .btn.back:hover {
+  color: white;
+  background-color:#ffc233;
+}
+
+.form-chuyen-tien-container .btn.cancel{
+  color: #e02020;
+  border: 1px solid #e02020;
+}
+.form-chuyen-tien-container .btn.cancel:hover{
+  color: white;
+  background-color:#e02020;
+}
+
+.form-chuyen-tien-container .loader-center-lazy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (max-width: 720px) {
+  .form-chuyen-tien-container {
+    width: 98%;
+  }
+}
